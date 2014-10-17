@@ -1,9 +1,20 @@
-Git command tasks:
+2014-10-17 GIT VERSION MNG OF AN ECLIPSE MAVEN PROJECT
+------------------------------------------------------
 Guide: http://git-scm.com/book
+My GIT URL: https://github.com/paarnio/
+paarnio/h_1_o
 
-Start Git shell
+GIT COMMANDS ON GIT SHELL COMMAND LINE TOOL:
+-------------------------------------------
+AT work pc auttpc-023
 
->cd maven_git_xml
+START
+-----
+Start Git shell (icon in my desktop)
+>cd maven_git_xml #Eclipse project folder at my work pc
+
+Creating local git repository
+----------------------------
 >git init
 Initialized empty Git repository in C:/javaopenlab/ecl_work_luna/2014/maven_git_
 xml/.git/
@@ -49,8 +60,12 @@ Creating .gitignore file
 "To create/rename on windows explorer, just rename to .name. 
 - The additional dot at the end is necessary, and will be removed by Windows Explorer."
 >cat .gitignore
+# ignoring all .class ~temp and .log files
 *.class
 *~
+*.log
+#ignore all files in the target/ directory
+target/
 
 Removing Files
 --------------
@@ -170,30 +185,24 @@ Date:   Fri Oct 17 12:15:43 2014 +0300
     Initial project commit 2014-10-17 at work pc autt-023
 C:\javaopenlab\ecl_work_luna\2014\maven_git_xml [master +0 ~1 -0]>
 
+CREATE REMOTE REPOSITORY USING WEB BROWSER
+------------------------------------------
+VPA: Create first a new remote repository using web browser:
+URL: https://github.com/paarnio/
+Login: paarnio/h_1_o
+Create new repository: name:maven_git_xml
+=> new repository path: https://github.com/paarnio/maven_git_xml.git 
+
+After it has been created
 Adding remote repositories
 --------------------------
 "To add a new remote Git repository as a shortname you can reference easily, 
 run git remote add [shortname] [url]:"
 
-git remote add vpamaven https://github.com/paarnio/maven_git_xml
+>git remote add vpanew https://github.com/paarnio/maven_git_xml.git
 
-C:\javaopenlab\ecl_work_luna\2014\maven_git_xml [master +0 ~1 -0]> git remote ad
-d vpamaven https://github.com/paarnio/maven_git_xml
-C:\javaopenlab\ecl_work_luna\2014\maven_git_xml [master +0 ~1 -0]> git remote -v
-
-origin
-vpamaven        https://github.com/paarnio/maven_git_xml (fetch)
-vpamaven        https://github.com/paarnio/maven_git_xml (push)
-C:\javaopenlab\ecl_work_luna\2014\maven_git_xml [master +0 ~1 -0]> git status
-# On branch master
-# Changes not staged for commit:
-#   (use "git add <file>..." to update what will be committed)
-#   (use "git checkout -- <file>..." to discard changes in working directory)
-#
-#       modified:   docs/git_versioning_commands.txt
-#
-no changes added to commit (use "git add" and/or "git commit -a")
-C:\javaopenlab\ecl_work_luna\2014\maven_git_xml [master +0 ~1 -0]>
+C:\javaopenlab\ecl_work_luna\2014\maven_git_xml [master]> git remote add vpanew
+https://github.com/paarnio/maven_git_xml.git
 
 Pushing to Your Remotes
 -----------------------
@@ -201,4 +210,46 @@ When you have your project at a point that you want to share,
 you have to push it upstream. 
 The command for this is simple: git push [remote-name] [branch-name].
 
->git push vpamaven master 
+C:\javaopenlab\ecl_work_luna\2014\maven_git_xml [master]> git push vpanew master
+
+Counting objects: 26, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (19/19), done.
+Writing objects: 100% (26/26), 5.39 KiB | 0 bytes/s, done.
+Total 26 (delta 2), reused 0 (delta 0)
+To https://github.com/paarnio/maven_git_xml.git
+ * [new branch]      master -> master
+C:\javaopenlab\ecl_work_luna\2014\maven_git_xml [master]> git remote
+origin
+vpanew  https://github.com/paarnio/maven_git_xml.git (fetch)
+vpanew  https://github.com/paarnio/maven_git_xml.git (push)
+C:\javaopenlab\ecl_work_luna\2014\maven_git_xml [master]>
+
+CHECK THE NEW REMOTE REPOSITORY USING WEB BROWSER
+-------------------------------------------------
+
+go to url: https://github.com/paarnio/maven_git_xml
+
+=>
+
+Second commit before pushing to remote vpamaven
+latest commit 0c6f3a9997
+paarnio paarnio authored an hour ago
+	.settings 	Initial project commit 2014-10-17 at work pc autt-023 	2 hours ago
+	docs 	Second commit before pushing to remote vpamaven 	an hour ago
+	src/main 	Initial project commit 2014-10-17 at work pc autt-023 	2 hours ago
+	.classpath 	Initial project commit 2014-10-17 at work pc autt-023 	2 hours ago
+	.gitignore 	Initial project commit 2014-10-17 at work pc autt-023 	2 hours ago
+	.project 	Initial project commit 2014-10-17 at work pc autt-023 	2 hours ago
+	pom.xml 	Initial project commit 2014-10-17 at work pc autt-023 	2 hours ago
+
+--------------------
+Add+commit+push these final changes in this file to remote repository:
+
+>git add *.txt
+<git status
+>git commit -m "Committing changes in git_versioning_commands.txt"
+>git push vpanew master
+
+"VPA: Have a nice weekend. Then try to clone this project to HP at home."
+===================================================================================
