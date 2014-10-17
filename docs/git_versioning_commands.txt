@@ -141,4 +141,64 @@ NOW ready to commit
 
 >git commit -m 'initial project version'
 ---- First Commit done ----
+===============================================================
+C:\javaopenlab\ecl_work_luna\2014\maven_git_xml [master +9 ~0 -0]> git commit -m
+ "Initial project commit 2014-10-17 at work pc autt-023"
+[master (root-commit) 119a4fa] Initial project commit 2014-10-17 at work pc autt
+-023
+ 9 files changed, 365 insertions(+)
+ create mode 100644 .classpath
+ create mode 100644 .gitignore
+ create mode 100644 .project
+ create mode 100644 .settings/org.eclipse.jdt.core.prefs
+ create mode 100644 .settings/org.eclipse.m2e.core.prefs
+ create mode 100644 docs/git_versioning_commands.txt
+ create mode 100644 pom.xml
+ create mode 100644 src/main/java/siima/examples/xml/xpath/XPathQueryExample.jav
+a
+ create mode 100644 src/main/resources/xmlfiles/employees.xml
+C:\javaopenlab\ecl_work_luna\2014\maven_git_xml [master]>
 
+GIT LOG
+----------
+
+C:\javaopenlab\ecl_work_luna\2014\maven_git_xml [master]> git log
+commit 119a4faf8f9044f09058d006eaa4e76be0073a1f
+Author: paarnio <pekka.aarnio@aalto.fi>
+Date:   Fri Oct 17 12:15:43 2014 +0300
+
+    Initial project commit 2014-10-17 at work pc autt-023
+C:\javaopenlab\ecl_work_luna\2014\maven_git_xml [master +0 ~1 -0]>
+
+Adding remote repositories
+--------------------------
+"To add a new remote Git repository as a shortname you can reference easily, 
+run git remote add [shortname] [url]:"
+
+git remote add vpamaven https://github.com/paarnio/maven_git_xml
+
+C:\javaopenlab\ecl_work_luna\2014\maven_git_xml [master +0 ~1 -0]> git remote ad
+d vpamaven https://github.com/paarnio/maven_git_xml
+C:\javaopenlab\ecl_work_luna\2014\maven_git_xml [master +0 ~1 -0]> git remote -v
+
+origin
+vpamaven        https://github.com/paarnio/maven_git_xml (fetch)
+vpamaven        https://github.com/paarnio/maven_git_xml (push)
+C:\javaopenlab\ecl_work_luna\2014\maven_git_xml [master +0 ~1 -0]> git status
+# On branch master
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#       modified:   docs/git_versioning_commands.txt
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+C:\javaopenlab\ecl_work_luna\2014\maven_git_xml [master +0 ~1 -0]>
+
+Pushing to Your Remotes
+-----------------------
+When you have your project at a point that you want to share, 
+you have to push it upstream. 
+The command for this is simple: git push [remote-name] [branch-name].
+
+>git push vpamaven master 
