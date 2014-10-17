@@ -1,0 +1,6 @@
+# ignoring all .class ~temp and .log files
+*.class
+*~
+*.log
+#ignore all files in the target/ directory
+target/

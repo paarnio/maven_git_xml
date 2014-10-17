@@ -1,0 +1,144 @@
+Git command tasks:
+Guide: http://git-scm.com/book
+
+Start Git shell
+
+>cd maven_git_xml
+>git init
+Initialized empty Git repository in C:/javaopenlab/ecl_work_luna/2014/maven_git_
+xml/.git/
+C:\javaopenlab\ecl_work_luna\2014\maven_git_xml [master +6 ~0 -0 !]>
+
+>git add *.txt
+C:\javaopenlab\ecl_work_luna\2014\maven_git_xml [master +2 ~0 -0 | +8 ~0 -0 !]>
+
+>git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+      new file:   src/main/resources/docs/git_versioning_commands.txt
+      new file:   target/classes/docs/git_versioning_commands.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+      modified:   src/main/resources/docs/git_versioning_commands.txt
+      modified:   target/classes/docs/git_versioning_commands.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+      .classpath
+      .project
+      .settings/
+      pom.xml
+      src/main/java/
+      src/main/resources/xmlfiles/
+      target/classes/siima/
+      target/classes/xmlfiles/
+\javaopenlab\ecl_work_luna\2014\maven_git_xml [master +2 ~0 -0 | +8 ~2 -0 !]>
+
+
+Creating .gitignore file
+------------------------
+"To create/rename on windows explorer, just rename to .name. 
+- The additional dot at the end is necessary, and will be removed by Windows Explorer."
+>cat .gitignore
+*.class
+*~
+
+Removing Files
+--------------
+(resources folder was a wrong place for the doc files)
+"To remove a file from Git, you have to remove it from your tracked files 
+(more accurately, remove it from your staging area) and then commit. 
+The git rm command does that and also removes the file from your working 
+directory so you don’t see it as an untracked file next time around."
+(Copy file to temp location docs/git_versioning_commands.txt before remove operation)
+
+>git rm -f src/main/resources/docs/git_versioning_commands.txt
+>git rm -f target/classes/docs/git_versioning_commands.txt
+
+C:\javaopenlab\ecl_work_luna\2014\maven_git_xml [master +6 ~0 -0 !]> git status
+# On branch master
+#
+# Initial commit
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#       .classpath
+#       .gitignore
+#       .project
+#       .settings/
+#       pom.xml
+#       src/
+nothing added to commit but untracked files present (use "git add" to track)
+C:\javaopenlab\ecl_work_luna\2014\maven_git_xml [master +6 ~0 -0 !]>
+
+Copying file
+-----------
+Copying file from temp location to the project root docs/git_versioning_commands.txt
+
+Add folders with content
+------------------------
+>git add src/
+C:\javaopenlab\ecl_work_luna\2014\maven_git_xml [master +8 ~0 -0 | +1 ~0 -0 !]>
+>git status
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+#   (use "git rm --cached <file>..." to unstage)
+#
+#       new file:   .classpath
+#       new file:   .gitignore
+#       new file:   .project
+#       new file:   .settings/org.eclipse.jdt.core.prefs
+#       new file:   .settings/org.eclipse.m2e.core.prefs
+#       new file:   docs/git_versioning_commands.txt
+#       new file:   src/main/java/siima/examples/xml/xpath/XPathQueryExample.jav
+a
+#       new file:   src/main/resources/xmlfiles/employees.xml
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#       pom.xml
+C:\javaopenlab\ecl_work_luna\2014\maven_git_xml [master +8 ~0 -0 | +1 ~0 -0 !]>
+
+>git add *.xml
+
+C:\javaopenlab\ecl_work_luna\2014\maven_git_xml [master +9 ~0 -0]> git status
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+#   (use "git rm --cached <file>..." to unstage)
+#
+#       new file:   .classpath
+#       new file:   .gitignore
+#       new file:   .project
+#       new file:   .settings/org.eclipse.jdt.core.prefs
+#       new file:   .settings/org.eclipse.m2e.core.prefs
+#       new file:   docs/git_versioning_commands.txt
+#       new file:   pom.xml
+#       new file:   src/main/java/siima/examples/xml/xpath/XPathQueryExample.jav
+a
+#       new file:   src/main/resources/xmlfiles/employees.xml
+#
+C:\javaopenlab\ecl_work_luna\2014\maven_git_xml [master +9 ~0 -0]>
+
+NOW ready to commit
+-------------------
+
+>git commit -m 'initial project version'
+---- First Commit done ----
+
