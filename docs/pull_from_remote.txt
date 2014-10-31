@@ -70,6 +70,44 @@ C:\javaopenlab\ecl_work_luna\2014\maven_git_xml [master]>
 
 ---- 18:05 Still have to add+commit these last changes and push --------
 
+=========== HOME PC DELL =====================
+2014-10-31 10:03
 
+C:\javalab\eclwork\remote_git\maven_git_xml [master]> git remote -v
+origin  https://github.com/paarnio/maven_git_xml (fetch)
+origin  https://github.com/paarnio/maven_git_xml (push)
+
+C:\javalab\eclwork\remote_git\maven_git_xml [master]> git fetch origin master
+remote: Counting objects: 8, done.
+remote: Compressing objects: 100% (8/8), done.
+remote: Total 8 (delta 3), reused 0 (delta 0)
+Unpacking objects: 100% (8/8), done.
+From https://github.com/paarnio/maven_git_xml
+ * branch            master     -> FETCH_HEAD
+   7b8f319..3251e2a  master     -> origin/master
+
+C:\javalab\eclwork\remote_git\maven_git_xml [master]> git status
+# On branch master
+# Your branch is behind 'origin/master' by 2 commits, and can be fast-forwarded.
+#   (use "git pull" to update your local branch)
+#
+nothing to commit, working directory clean
+
+C:\javalab\eclwork\remote_git\maven_git_xml [master]> git pull
+remote: Counting objects: 12, done.
+remote: Compressing objects: 100% (12/12), done.
+remote: Total 12 (delta 6), reused 0 (delta 0)
+Unpacking objects: 100% (12/12), done.
+From https://github.com/paarnio/maven_git_xml
+ * [new branch]      dellpc     -> origin/dellpc
+Updating 7b8f319..3251e2a
+Fast-forward
+ docs/pull_from_remote.txt | 75 +++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 75 insertions(+)
+ create mode 100644 docs/pull_from_remote.txt
+C:\javalab\eclwork\remote_git\maven_git_xml [master]>
+
+
+-------------------------
 
 
